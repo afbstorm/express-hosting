@@ -21,7 +21,7 @@ const userController = {
             }
 
             if (user.jwt) {
-                return res.status(200).redirect('/api/products');
+                return res.status(200)
             } else if (password) {
                 const isPasswordValid = bcrypt.compareSync(password, user.password);
 
