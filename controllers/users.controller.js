@@ -62,10 +62,10 @@ const userController = {
             // Envoi des inputs au validateur
             const bodyValidated = await registerValidator.validate(req.body);
             // Récupération des informations validées
-            const { nom, prenom, age, password, email } = bodyValidated;
+            const { password, email } = bodyValidated;
             const hashedPassword = bcrypt.hashSync(password, 10);
 
-            const result = await userService.register({nom, prenom, age, hashedPassword, email})
+            const result = await userService.register({hashedPassword, email})
             if (result) {
                 return res.status(200).json({message: "L'utilisateur a bien été enregistré"});
             }
