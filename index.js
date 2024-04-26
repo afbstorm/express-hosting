@@ -5,7 +5,7 @@ const cors = require('cors');
 const PORT = 8001;
 const app = express();
 app.use(cors({
-    origin: 'https://angular-hosting-rho.vercel.app/',
+    origin: 'https://angular-hosting-rho.vercel.app',
     credentials: true,
     headers: 'Access-Control-Allow-Origin'
 }))
