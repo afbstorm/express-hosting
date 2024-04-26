@@ -7,7 +7,7 @@ const app = express();
 app.use(cors({
     origin: 'https://angular-hosting-rho.vercel.app',
     credentials: true,
-    headers: 'Access-Control-Allow-Origin, Content-Type'
+    headers: 'Access-Control-Allow-Origin, Content-Type, Authorization'
 }))
 
 app.use(express.json());
