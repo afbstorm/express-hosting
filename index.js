@@ -3,6 +3,11 @@ const router = require('./router/router');
 
 const PORT = 8001;
 const app = express();
+app.use(cors({
+    origin: '*',
+    credentials: true,
+    headers: 'Access-Control-Allow-Origin'
+}))
 
 app.use(express.json());
 app.use('/api', router);
